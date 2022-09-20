@@ -6,18 +6,24 @@ class ListViewBody extends StatelessWidget {
   }) : super(key: key);
 
   final titles = [
-    "List 1",
-    "List 2",
-    "List 3",
-    "List 4",
-    "List 5",
+    "Apple Watch 7",
+    "Canon EOS 200D",
+    "JBL GO 2",
+    "Rexux Daxa M71 Pro",
+    "Logitech Pro X",
+    "Razer Deathadder",
+    "Razer Deathadder",
+    "Razer Deathadder",
   ];
   final subtitles = [
-    "Here is list 1 subtitle",
-    "Here is list 2 subtitle",
-    "Here is list 3 subtitle",
-    "Here is list 4 subtitle",
-    "Here is list 5 subtitle",
+    "USD 159.99",
+    "USD 599.99",
+    "USD 129.99",
+    "USD 99.99",
+    "USD 139.99",
+    "USD 79.99",
+    "USD 79.99",
+    "USD 79.99",
   ];
   final image = [
     "assets/images/apple_watch_7.jpg",
@@ -25,6 +31,9 @@ class ListViewBody extends StatelessWidget {
     "assets/images/jbl_go_2.jpg",
     "assets/images/rexus_daxa_m71_pro.jpg",
     "assets/images/logitech_pro_x.jpg",
+    "assets/images/razer_deathadder.jpg",
+    "assets/images/razer_deathadder.jpg",
+    "assets/images/razer_deathadder.jpg",
   ];
 
   @override
@@ -34,27 +43,34 @@ class ListViewBody extends StatelessWidget {
         shrinkWrap: true,
         itemCount: titles.length,
         itemBuilder: (context, index) {
-          return Card(
-              child: ListTile(
-            title: Text(
-              titles[index],
-              style: const TextStyle(
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            subtitle: Text(
-              subtitles[index],
-              style: const TextStyle(
-                fontFamily: 'Poppins',
-                color: Color.fromARGB(255, 122, 20, 255),
-              ),
-            ),
-            leading: Image.asset(
-              image[index],
-              width: 80,
-            ),
-          ));
+          return SizedBox(
+            height: 90,
+            child: Card(
+                margin: const EdgeInsets.all(8),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: ListTile(
+                  title: Text(
+                    titles[index],
+                    style: const TextStyle(
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  subtitle: Text(
+                    subtitles[index],
+                    style: const TextStyle(
+                      fontFamily: 'Poppins',
+                      color: Color.fromARGB(255, 122, 20, 255),
+                    ),
+                  ),
+                  leading: Image.asset(
+                    image[index],
+                    width: 90,
+                  ),
+                )),
+          );
         });
   }
 }

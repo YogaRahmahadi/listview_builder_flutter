@@ -12,22 +12,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Listview Builder',
         theme: ThemeData(
             primarySwatch: Colors.blue,
-            scaffoldBackgroundColor: const Color(0xffeeeeee)),
+            scaffoldBackgroundColor: const Color.fromARGB(255, 231, 231, 231)),
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          body: Column(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(16),
-                height: 150,
-                color: Colors.white,
-                child: const Header(),
-              ),
-              ListViewBody(),
-            ],
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  height: 150,
+                  color: Colors.white,
+                  child: const Header(),
+                ),
+                ListViewBody(),
+              ],
+            ),
           ),
           bottomNavigationBar: BottomNavigationBar(
               backgroundColor: Colors.white,
