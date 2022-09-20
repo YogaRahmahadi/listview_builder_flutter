@@ -11,6 +11,11 @@ class ListViewBody extends StatelessWidget {
     "Here is list 2 subtitle",
     "Here is list 3 subtitle"
   ];
+  final image = [
+    "assets/images/beras.jpg",
+    "assets/images/bruno.jpg",
+    "assets/images/jakub.jpg"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +23,14 @@ class ListViewBody extends StatelessWidget {
         itemCount: titles.length,
         itemBuilder: (context, index) {
           return Card(
-            child: ListTile(
-              title: Text(titles[index]),
-              subtitle: Text(subtitles[index]),
+              child: ListTile(
+            title: Text(titles[index]),
+            subtitle: Text(subtitles[index]),
+            leading: Image.asset(
+              image[index],
+              width: 80,
             ),
-          );
+          ));
         });
   }
 }
