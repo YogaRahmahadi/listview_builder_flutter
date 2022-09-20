@@ -34,6 +34,7 @@ class Header extends StatelessWidget {
                 'Featured Items',
                 style: TextStyle(
                   fontFamily: 'Poppins',
+                  color: Colors.white,
                 ),
               ),
             ),
